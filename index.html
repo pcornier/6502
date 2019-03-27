@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title></title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/eruda/1.5.4/eruda.min.js"></script>
+    <script>eruda.init()</script>
+    <style type="text/css">
+      @font-face {
+        font-family: 'c64';
+        src: url('./c64.ttf');
+      }
+    </style>
+  </head>
+  <body style="margin: 0; background-color: #000; overflow: hidden">
+    <div style="position: relative; cursor: none" onmousemove="setMP(event)" ontouchmove="setMP(event)"  onmouseup="setMD(true)" ontouchend="setMD(true)">
+      <canvas id="screen" width="256" height="256" style="image-rendering: pixelated; cursor: none; width: 100%;font-family: c64" moz-opaque></canvas>
+      <input type="text" onkeyup="setKD(this,event)" style="position: absolute; top: 0; cursor: none; width: 100%; height: 100%; opacity: 0">
+    </div>
+    <div id="infos"></div>
+  </body>
+</html>

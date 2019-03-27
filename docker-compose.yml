@@ -1,0 +1,9 @@
+version: '3'
+services:
+  web:
+    image: node
+    volumes:
+      - ./:/home/app
+    ports:
+      - "80:80"
+    command: bash -c "cd /home/app && yarn install --production=false && yarn run webpack && yarn run webpack-dev-server --host 0.0.0.0 --port 80"
